@@ -1,0 +1,194 @@
+.App
+  font-family: $roboto
+  height: auto
+  min-height: 100vh
+  width: 100%
+  background-color: white
+
+
+.NoteInputs
+  height: auto
+  min-height: 100vh
+  width: 60%
+  float: left
+  padding: 6vw
+  .content
+    height: -webkit-fill-available
+    width: 100%
+    h1
+      font-family: $roboto
+      font-size: 46px
+      color: #333
+    .input-wrapper
+      height: 100%
+      width: 100%
+      max-width: 700px
+      margin-top: 3vw
+      display: flex
+      flex-direction: column
+      .input-top
+        #new-title
+          height: 48px
+          width: calc(50% - 5px)
+          font-size: 16px
+          padding: 16px
+          border-radius: 5px
+          border: none
+          box-shadow: $box-shadow2
+          outline: none
+          font-family: $roboto
+          transition: .2s ease-out
+          &:focus
+            box-shadow: $box-shadow3
+        .calendar
+          height: 48px
+          width: calc(50% - 5px)
+          font-size: 16px
+          padding: 16px
+          margin-left: 10px
+          border-radius: 5px
+          border: none
+          box-shadow: $box-shadow2
+          transition: .2s ease-out
+          outline: none
+          font-family: $roboto
+          &:focus
+            box-shadow: $box-shadow3
+      #new-note
+        height: 300px
+        width: 100%
+        margin-top: 20px
+        padding: 16px
+        font-family: $roboto
+        resize: none
+        font-size: 16px
+        border-radius: 5px
+        border: none
+        transition: .2s ease-out
+        box-shadow: $box-shadow2
+        outline: none
+        &:focus
+          box-shadow: $box-shadow3
+      .add-btn
+        height: 46px
+        width: 200px
+        padding: 8px 16px
+        box-shadow: $box-shadow2
+        border-radius: 5px
+        font-size: 14px
+        letter-spacing: 1px
+        color: #333
+        font-weight: 600
+        text-transform: uppercase
+        margin-top: 15px
+        transition: .2s ease-out
+        border: 2px solid #333
+        &:hover
+          box-shadow: $box-shadow3
+          background-color: #333
+          color: white
+
+.NoteList
+  height: 100vh
+  width: 40%
+  float: left
+  background-color: #71abab
+  padding: 3vw 6vw
+  overflow-y: scroll
+  h2
+    text-align: center
+    margin-bottom: 1vw
+    color: #151515
+  .content
+    ul
+      list-style-type: none
+      display: flex
+      flex-direction: column-reverse
+
+      li
+        background-color: white
+        box-shadow: $box-shadow2
+        margin: 15px
+        border-radius: 5px
+        .note-top
+          padding: 8px
+          display: flex
+          justify-content: space-between
+          background-color: #e2e5ff
+          border-radius: 5px 5px 0 0
+          .note-title
+            font-family: $roboto
+            font-size: 16px
+            letter-spacing: 1px
+            font-weight: 500
+            width: fit-content
+            color: #2b2b2b
+
+            padding: 8px
+            float: left
+          .note-del-btn
+            margin: 8px
+        .note-body
+          padding: 5px
+          .note-text
+            font-family: $roboto
+            font-size: 16px
+            font-weight: 400
+            line-height: 1.5
+            padding: 5px
+          .note-date
+            font-family: $roboto
+            font-size: 14px
+            font-weight: 500
+            background-color: #f5f5f5
+            padding: 8px
+            color: #151515
+            text-align: right
+
+@media only screen and (max-width: 1400px)
+  .NoteInputs
+    padding: 3vw
+  .NoteList
+    padding: 3vw
+
+@media only screen and (max-width: 1200px)
+  .NoteInputs
+    min-height: initial
+    width: 100%
+    padding: calc(3vw + 20px)
+    .content
+      height: auto
+      h1
+        text-align: center
+      .input-wrapper
+        margin: auto
+        margin-top: calc(3vw + 20px)
+  .NoteList
+    width: 100%
+    height: auto
+    overflow-y: auto
+    padding: calc(3vw + 20px)
+    h2
+      margin-bottom: calc(3vw + 20px)
+    .content
+      max-width: 600px
+      margin: auto
+
+@media only screen and (max-width: 500px)
+  .NoteInputs
+    padding: 20px
+    .content
+      h1
+        font-size: 36px
+      .input-wrapper
+        margin-top: 20px
+        .input-top
+          #new-title
+            width: 100%
+          .calendar
+            width: 100%
+            margin: 10px 0 0 0
+  .NoteList
+    padding: 20px 10px
+    h2
+      margin-bottom: 20px
